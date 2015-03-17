@@ -84,6 +84,9 @@ class BattleRoyale
           battle_num += 1
         end
       end
+
+      # Force exit when quit from game loop
+      exit!
     end
 
     def do_battle(attacker, defender)
@@ -123,7 +126,7 @@ class BattleRoyale
       case gets.chomp
         when 'exit'
           puts 'Goodbye...'
-          exit
+          exit!
         when 'new'
           new_character
         when 'start'
